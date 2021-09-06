@@ -17,13 +17,14 @@ type Pool struct {
 func NewTask(f func(params ...interface{}) error,p ...interface{}) *Task{
 	return &Task{f,p}
 }
-
+//dasdasdasd
 func NewPool(cap int) *Pool{
 	return &Pool{
 		make(chan *Task),
 		cap,
 	}
 }
+//dasdasdasd
 func (p *Pool) Enqueue(t *Task){
 	p.tasks <- t
 }
