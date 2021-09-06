@@ -24,8 +24,6 @@ func NewPool(cap int) *Pool{
 		cap,
 	}
 }
-/*
-*/
 func (p *Pool) Enqueue(t *Task){
 	p.tasks <- t
 }
